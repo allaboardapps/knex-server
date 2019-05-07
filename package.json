@@ -1,0 +1,23 @@
+{
+  "name": "palmtree-server",
+  "version": "1.0.0",
+  "description": "Multitenant server application for Palmtree service",
+  "main": "index.js",
+  "engines": {
+    "node": "12.1.0",
+    "npm": "6.9.0"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allaboardapps/palmtree-server.git"
+  },
+  "author": "wrburgess@gmail.com",
+  "license": "Refer to LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/allaboardapps/palmtree-server/issues"
+  },
+  "homepage": "https://github.com/allaboardapps/palmtree-server#readme"
+}
