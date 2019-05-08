@@ -68,3 +68,12 @@ test.js
 development.js
 staging.js
 production.js
+
+# typescript
+**/dist/*
+
+# esdoc
+docs
+
+# npm
+package-lock.json
