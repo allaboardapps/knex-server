@@ -1,17 +1,19 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
+    "allowJs": true,
     "esModuleInterop": true,
     "module": "commonjs",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
-    "outDir": "lib",
+    "outDir": "dist",
     "removeComments": true,
+    "resolveJsonModule": true,
     "sourceMap": true,
     "strict": true,
     "target": "es2015"
   },
-  "compileOnSave": true,
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "exclude": ["node_modules"],
+  "include": ["src", "src/**/*.json"]
 }
