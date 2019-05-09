@@ -4,7 +4,7 @@
     "allowJs": true,
     "esModuleInterop": true,
     "module": "commonjs",
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "outDir": "dist",

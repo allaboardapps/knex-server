@@ -3,17 +3,15 @@ import config from './config'
 import express from 'express'
 import cors from 'cors'
 import morgan from 'morgan'
-
-// const Rollbar = require('rollbar');
-const PORT = process.env.PORT || config.get('port')
-// const rollbar = new Rollbar(keys.ROLLBAR_ACCESS_TOKEN);
+import rollbar from './services/rollbar'
 import apiRouter from './routes/apiRoutes'
 
+const PORT = config.get('port')
 const app = express()
-app.use(cors())
-// app.use(rollbar.errorHandler());
-app.use(morgan('dev'))
 
+app.use(cors())
+app.use(morgan('dev'))
+app.use(rollbar.errorHandler())
 app.use(apiRouter)
 
 const server = app.listen(

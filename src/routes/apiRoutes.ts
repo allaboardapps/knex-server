@@ -7,7 +7,7 @@ apiRouter.get(
   '/api/v1',
   urlencodedParser,
   (req, res): void => {
-    res.render('index')
+    res.send('index')
   },
 )
 
