@@ -1,13 +1,14 @@
 import express from 'express'
-const apiRouter = express.Router()
 import bodyParser from 'body-parser'
+
+const apiRouter = express.Router()
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 apiRouter.get(
   '/api/v1',
   urlencodedParser,
   (req, res): void => {
-    res.send('index')
+    res.json({ test: 'pass' })
   },
 )
 
