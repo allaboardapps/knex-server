@@ -9,7 +9,7 @@ import apiRoutes from '../../src/routes/apiRoutes'
 // }
 
 describe('GET /api/v1/', (): void => {
-  it('should fetch the json at the endpoint', async () => {
+  it('should fetch the json at the endpoint', async (): Promise<void> => {
     const app = express()
     app.use(apiRoutes)
 
