@@ -8,7 +8,7 @@ apiRouter.get(
   '/api/v1',
   urlencodedParser,
   (req, res): void => {
-    res.json({ test: 'pass' })
+    res.json({ test: 'pass-fail' })
   },
 )
 
