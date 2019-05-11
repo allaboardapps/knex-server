@@ -1,5 +1,6 @@
 const setTenant = (req, res, next): any => {
   const tenants = {
+    ['127.0.0.1']: '00001',
     ['compliance.ngrok.io']: '00001',
     ['allaboardapps.ngrok.io']: '00002',
     ['palmtree-server-staging.herokuapp.com']: '00002',

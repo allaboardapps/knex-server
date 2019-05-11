@@ -6,7 +6,7 @@ const apiRouter = express.Router()
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 apiRouter.get(
-  '/api/v1',
+  '/api/v1/user',
   urlencodedParser,
   async (req, res): Promise<void> => {
     try {
@@ -26,6 +26,14 @@ apiRouter.get(
     } catch (err) {
       console.log(err.stack)
     }
+  },
+)
+
+apiRouter.get(
+  '/api/v1/test',
+  urlencodedParser,
+  (req, res): void => {
+    res.json({ test: 'pass' })
   },
 )
 
