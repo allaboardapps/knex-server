@@ -4,6 +4,7 @@
     "allowJs": true,
     "esModuleInterop": true,
     "module": "commonjs",
+    "noEmitOnError": false,
     "noImplicitAny": false,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
@@ -15,5 +16,6 @@
     "target": "es2015"
   },
   "exclude": ["node_modules", "specs"],
-  "include": ["src", "src/**/*.json"]
+  "include": ["src", "src/**/*.json"],
+  "files": ["custom.d.ts"]
 }
