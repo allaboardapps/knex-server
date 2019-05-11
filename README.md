@@ -1,5 +1,11 @@
 # Palmtree Server
 
+## Priorities
+
+- Auth0 integration
+- Multitenant PG setup
+- GraphQL integration
+
 ## Getting Started
 
 1. Clone the repo with `git clone git@github.com:allaboardapps/palmtree-server.git`
@@ -7,6 +13,12 @@
 1. Ask administrator for `.env` file and place in directory root
 1. It's likely helpful to install some global dependencies `npm install -g typescript eslint prettier nodemon`
 1. Install repo dependencies with `npm install`
+
+## Security
+
+- Check for dependency updates with `npm outdated`
+- Scan dependencies with `npm audit`
+- Scan dependencies with the [snyk](https://app.snyk.io) service with `snyk auth` and `snyk monitor` (requires account)
 
 ## Continuous Integration
 
