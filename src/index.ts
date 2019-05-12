@@ -7,9 +7,9 @@ import helmet from 'helmet'
 import pino from 'express-pino-logger'
 
 import apiRouter from './routes/apiRoutes'
-import setTenant from './middleware/setTenant'
-import setDatastore from './middleware/setDatastore'
 import rollbar from './services/rollbar'
+import setDatastore from './middleware/setDatastore'
+import setTenant from './middleware/setTenant'
 
 const app = express()
 const PORT = config.get('port')

@@ -1,15 +1,18 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 import { Pool } from 'pg'
+import jwtCheck from '../middleware/jwtCheck'
 
 const apiRouter = express.Router()
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 apiRouter.get(
   '/api/v1/user',
+  jwtCheck,
   urlencodedParser,
   async (req, res): Promise<void> => {
     try {
+      console.log('req.user', req.user)
       const { connectionString } = res
       const pool = new Pool({ connectionString })
       const client = await pool.connect()
