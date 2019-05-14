@@ -8,7 +8,7 @@ const setTenant = (req, res, next): any => {
     ['localhost']: '00003',
   }
 
-  res.tenant = tenants[req.hostname]
+  res.locals.tenantId = tenants[req.hostname]
 
   next()
 }

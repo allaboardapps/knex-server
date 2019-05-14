@@ -1,6 +1,8 @@
 declare namespace Express {
   export interface Response {
-    tenant?: string
-    connectionString?: string
+    locals: {
+      connectionString: string
+      tenantId: string
+    }
   }
 }

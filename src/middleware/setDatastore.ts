@@ -1,6 +1,8 @@
 const setDatastore = (req, res, next): any => {
-  const tenant = res.tenant.toUpperCase()
-  res.connectionString = process.env[`TENANT_${tenant}_DB_CONNECTION`]
+  const tenantId = res.locals.tenantId.toUpperCase()
+  res.locals.dbConnectionString = process.env[`${tenantId}_DB_CONNECTION`]
+
+  console.log('res.locals.dbConnectionString', res.locals.dbConnectionString)
 
   next()
 }

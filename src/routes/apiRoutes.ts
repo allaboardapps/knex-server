@@ -12,8 +12,7 @@ apiRouter.get(
   urlencodedParser,
   async (req, res): Promise<void> => {
     try {
-      console.log('req.user', req.user)
-      const { connectionString } = res
+      const { connectionString } = res.locals
       const pool = new Pool({ connectionString })
       const client = await pool.connect()
       const results = await client.query('SELECT * FROM users')
